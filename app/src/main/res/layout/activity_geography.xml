@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_lifes"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_margin="8dp"
+        android:alpha="0.9">
+
+        <LinearLayout
+            android:id="@+id/mainLayoutlifes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/life1"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/life"
+                />
+
+            <ImageView
+                android:id="@+id/life2"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/life"
+                />
+
+            <ImageView
+                android:id="@+id/life3"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/life"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_hangman"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/card_view_lifes"
+        android:layout_margin="8dp"
+        android:alpha="0.9"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/mainLayouthangman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/hangman1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hangman1"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/hangman1andhalf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hangman1andhalf"
+                android:visibility="invisible" />
+
+
+            <ImageView
+                android:id="@+id/hangman2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hangman2"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/hangman3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/hangman3"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_below="@id/card_view_hangman"
+        android:layout_centerInParent="true"
+        android:layout_margin="6dp"
+
+        android:alpha="0.9"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Question"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+
+
+                />
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTitle"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:text="Let's Play"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/fl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDescription"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/a"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:onClick="OptionA" />
+
+
+                <Button
+                    android:id="@+id/b"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+
+                    android:onClick="OptionB" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/c"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="OptionC" />
+
+                <Button
+                    android:id="@+id/d"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:onClick="OptionD" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/NextBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="#f51b00"
+                android:onClick="Nextbtn"
+                android:text="Next"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/mainLayoutHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:weightSum="6"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/givetwoChoice"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="#ffff00"
+            android:onClick="GiveTwoChoices"
+            android:text="Give two Choices"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/changeQuestion"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffff00"
+            android:onClick="ChangeQuestion"
+            android:text="Change Question"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Iquit"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffff00"
+            android:onClick="IQuitGame"
+            android:text="I Quit"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--    </androidx.cardview.widget.CardView>-->
+
+</RelativeLayout>
